@@ -315,7 +315,7 @@ Pct Corr dog:  60.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  56.7
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog:  60.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  56.7
-Using Namespace(arch='vgg', dir='pet_images/', dogfile='dognames.txt') CNN model
+Using vgg CNN model
 Overall Count :
 Number of Images is 40
 Number of Dog Images is 30
@@ -379,4 +379,4 @@ Printing Misclassified Breeds :
 Real:             great pyrenees   Classifier:                         kuvasz  
 PetLabelDog: 1  ClassLabelDog: 1
 
-** Total Elapsed Runtime: 0:0:21
+** Total Elapsed Runtime: 0:0:22

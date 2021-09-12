@@ -315,7 +315,7 @@ Pct Corr dog:  53.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  46.7
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog:  53.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  46.7
-Using Namespace(arch='alexnet', dir='pet_images/', dogfile='dognames.txt') CNN model
+Using alexnet CNN model
 Overall Count :
 Number of Images is 40
 Number of Dog Images is 30
