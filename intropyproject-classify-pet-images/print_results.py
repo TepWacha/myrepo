@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: Tep Wacharotayangoon
+# DATE CREATED: 9/12/2021
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
@@ -62,5 +62,31 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
-                
+    print("Using {} CNN model".format(model))
+    print("Overall Count :")
+    print("Number of Images is {}".format(results_stats_dic["n_images"]))
+    print("Number of Dog Images is {}".format(results_stats_dic["n_dogs_img"]))
+    print("Number of \"Not-a\" Dog Images is {}".format(results_stats_dic["n_notdogs_img"]))
+    print("Percentage Calculations:")
+    print("{}% Correct Dogs".format(results_stats_dic['pct_correct_dogs']))
+    print("{}% Correct Breed".format(results_stats_dic['pct_correct_breed']))
+    print("{}% Correct \"Not-a\" Dog".format(results_stats_dic['pct_correct_notdogs']))
+
+    if print_incorrect_dogs and results_stats_dic["n_correct_dogs"] + results_stats_dic["n_correct_notdogs"]!=results_stats_dic["n_dogs_img"]:
+        print("Printing Misclassified Dogs :")
+        for key in results_dic:
+            if sum(results_dic[key][3:]) == 1:
+                print("\n{:>30}: \nReal: {:>26}   Classifier: {:>30}  \nPetLabelDog: {:1d}  ClassLabelDog: {:1d}".format(
+                        key,
+                        results_dic[key][0], results_dic[key][1], results_dic[key][3],
+                        results_dic[key][4]))
+
+    if print_incorrect_breed and results_stats_dic["n_correct_dogs"] != results_stats_dic["n_correct_breed"]:
+        print("Printing Misclassified Breeds :")
+        for key in results_dic:
+            if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
+                print("\n{:>30}: \nReal: {:>26}   Classifier: {:>30}  \nPetLabelDog: {:1d}  ClassLabelDog: {:1d}".format(
+                        key,
+                        results_dic[key][0], results_dic[key][1], results_dic[key][3],
+                        results_dic[key][4]))
+

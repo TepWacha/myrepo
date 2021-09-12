@@ -1,0 +1,4 @@
+1. answer : All 3 models classified my Dog_01.jpg as Siberian Husky
+2. answer : alexnet and resnet both reported both Dog_01.jpg and Dog_02.jpg a Siberian Husky, but vgg reported Dog_02.jpg as malamute, malemute, Alaskan malamute
+3. answer : For Wombat_01.jpg only alexnet is wrong it said this picture is a beaver, For Building_01.jpg they are all wrong alexnet said it was planetarium and resnet and vgg both said "cinema, movie theater, movie theatre, movie house, picture palace" but the right answer is condominium
+4. answer : resnet is the best, it only wrong at Building_01.jpg
