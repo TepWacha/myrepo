@@ -45,13 +45,15 @@ def get_pet_labels(image_dir):
     results_list = []
     file_names = listdir(image_dir)
     for filename in file_names:
+        if filename.startswith("."):
+            continue
         temp = filename.rsplit("_", 1)
         temp2 = temp[0].split("_")
         label = ""
         for part in temp2:
             label += " " + part.lower()
-        labelList = [label.strip()]
-        results_list.append([filename, labelList])
+        label_list = [label.strip()]
+        results_list.append([filename, label_list])
     results_dic = dict(results_list)
 
     return results_dic

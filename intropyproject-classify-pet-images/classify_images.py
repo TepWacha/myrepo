@@ -66,13 +66,9 @@ def classify_images(images_dir, results_dic, model):
            None - results_dic is mutable data type so no return needed.         
     """
     for key in results_dic:
-        cflabel = classifier(images_dir + key, model)
-        results_dic[key].append(cflabel)
+        cflabel = classifier(images_dir + key, model).lower().strip()
         flag = 0
-        allLabel = cflabel.split(",")
-        for eachLabel in allLabel:
-            if flag:
-                break
-            if eachLabel.strip().lower() == results_dic[key][0]:
-                flag = 1
+        if results_dic[key][0] in cflabel:
+            flag = 1
+        results_dic[key].append(cflabel)
         results_dic[key].append(flag)

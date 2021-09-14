@@ -21,10 +21,10 @@ Real:                     wombat   Classifier:                         wombat
 Real:                   building   Classifier: cinema, movie theater, movie theatre, movie house, picture palace
 
                 Dog_01.jpg.jpg: 
-Real:                        dog   Classifier:                 Siberian husky
+Real:                        dog   Classifier:                 siberian husky
 
                 Dog_02.jpg.jpg: 
-Real:                        dog   Classifier: malamute, malemute, Alaskan malamute
+Real:                        dog   Classifier: malamute, malemute, alaskan malamute
 
 # Total Images 4 # Matches: 1 # NOT Matches: 3
 
@@ -41,30 +41,40 @@ Real:                   building   Classifier: cinema, movie theater, movie thea
 PetLabelDog: 0  ClassLabelDog: 0
 
                 Dog_01.jpg.jpg: 
-Real:                        dog   Classifier:                 Siberian husky  
-PetLabelDog: 1  ClassLabelDog: 0
+Real:                        dog   Classifier:                 siberian husky  
+PetLabelDog: 1  ClassLabelDog: 1
 
                 Dog_02.jpg.jpg: 
-Real:                        dog   Classifier: malamute, malemute, Alaskan malamute  
-PetLabelDog: 1  ClassLabelDog: 0
+Real:                        dog   Classifier: malamute, malemute, alaskan malamute  
+PetLabelDog: 1  ClassLabelDog: 1
 
 # Total Images 4 # Matches: 1 # NOT Matches: 3
 
  ** Statistics from calculates_results_stats() function:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 Using vgg CNN model
 Overall Count :
 Number of Images is 4
 Number of Dog Images is 2
 Number of "Not-a" Dog Images is 2
 Percentage Calculations:
-0.0% Correct Dogs
+100.0% Correct Dogs
 0.0% Correct Breed
 100.0% Correct "Not-a" Dog
+Printing Misclassified Dogs :
+Printing Misclassified Breeds :
+
+                Dog_01.jpg.jpg: 
+Real:                        dog   Classifier:                 siberian husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Dog_02.jpg.jpg: 
+Real:                        dog   Classifier: malamute, malemute, alaskan malamute  
+PetLabelDog: 1  ClassLabelDog: 1
 
 ** Total Elapsed Runtime: 0:0:2
